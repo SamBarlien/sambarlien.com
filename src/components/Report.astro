@@ -1,0 +1,23 @@
+---
+// A numbered research entry: big italic number, title, and Sam's short take.
+interface Props { n: number; title: string; url: string; take?: string; with?: string[] }
+const { n, title, url, take, with: coauthors } = Astro.props;
+---
+<a class="report" href={url}>
+  <i>{String(n).padStart(2, "0")}</i>
+  <span>
+    <b>{title}</b>
+    {take && <span class="take">{take}</span>}
+    {coauthors && coauthors.length > 0 && <span class="with">With {coauthors.join(", ")}</span>}
+  </span>
+</a>
+<style>
+  .report { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--rule); text-decoration: none; }
+  i { font: italic 400 44px/1 var(--serif); color: var(--accent); }
+  b { display: block; font-weight: 600; font-size: 20px; line-height: 1.3; margin-bottom: 4px; }
+  .report:hover { color: inherit; }
+  .report:hover b { text-decoration: underline; text-underline-offset: 3px; }
+  .take { display: block; }
+  .with { display: block; font-size: 14px; color: var(--muted); margin-top: 6px; }
+  @media (max-width: 520px) { .report { grid-template-columns: 48px 1fr; gap: 12px; } i { font-size: 32px; } }
+</style>

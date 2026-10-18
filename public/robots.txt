@@ -1,0 +1,10 @@
+# Everyone, including AI crawlers, is welcome to read this site.
+User-agent: *
+Allow: /
+
+# Except this one image: an AI-generated face that isn't Sam.
+# Keeps it out of image search results for his name.
+User-agent: Googlebot-Image
+Disallow: /why/ai-generated-face-not-sam.webp
+
+Sitemap: https://sambarlien.com/sitemap-index.xml

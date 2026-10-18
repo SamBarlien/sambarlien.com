@@ -5,3 +5,7 @@ dist/
 
 # Research notes and drafts stay on this Mac, not in the public repo
 inventory/
+
+# Design experiments: local previews only
+src/pages/lab/
+src/lab-data.ts

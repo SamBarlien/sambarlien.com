@@ -1,5 +1,11 @@
 ---
 // Shared page frame: head tags, top bar, footer. Every page uses this.
+// Fonts are served from this site, not Google Fonts, so visitors' browsers
+// don't contact a third party just to draw text.
+import "@fontsource/instrument-serif/400.css";
+import "@fontsource/instrument-serif/400-italic.css";
+import "@fontsource-variable/inter";
+
 interface Props {
   title: string;
   description: string;
@@ -7,10 +13,29 @@ interface Props {
 const { title, description } = Astro.props;
 const nav = [
   { href: "/library/", label: "Library" },
-  { href: "/about/", label: "About" },
-  { href: "/why/", label: "Why" },
+  { href: "/why/", label: "Why...?" },
 ];
 const here = Astro.url.pathname;
+const pageUrl = new URL(here, Astro.site);
+const shareImage = new URL("/og-sam-barlien.jpg", Astro.site);
+
+// Hidden facts for search engines and AI tools: who Sam is, his photo, and
+// which profiles elsewhere are also him.
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Sam Barlien",
+  url: "https://sambarlien.com/",
+  image: "https://sambarlien.com/sam-barlien.jpg",
+  jobTitle: "Head of Ecosystem",
+  worksFor: { "@type": "Organization", name: "Platform Engineering", url: "https://platformengineering.org" },
+  knowsAbout: ["Platform engineering", "Internal developer platforms", "Agentic engineering platforms"],
+  sameAs: [
+    "https://platformengineering.org/authors/sam-barlien",
+    "https://github.com/SamBarlien",
+    "https://www.imdb.com/name/nm9463674/",
+  ],
+};
 ---
 <!doctype html>
 <html lang="en">
@@ -19,36 +44,54 @@ const here = Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(here, Astro.site)} />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- The preview card when a link is shared on LinkedIn, Slack, X etc. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sam Barlien" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:image" content={shareImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sam Barlien" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
     <style is:global>
       :root {
-        --bg: #fbfbf9; --fg: #1b1c1e; --muted: #5d6067; --line: #e3e3de; --link: #1f5fa8;
-        --font: "Iowan Old Style", "Charter", Georgia, serif;
-        --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        --paper: #f3efe6; --ink: #17150f; --muted: #6b6352; --rule: #c9c1ad; --accent: #b4401b;
+        --serif: "Instrument Serif", Georgia, serif;
+        --sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
       }
       @media (prefers-color-scheme: dark) {
-        :root { --bg: #141517; --fg: #e8e8e6; --muted: #a0a3a9; --line: #2c2e32; --link: #8bb8ec; }
+        :root { --paper: #16140f; --ink: #ece6d8; --muted: #a59b86; --rule: #3a352a; --accent: #e07a52; }
       }
       * { box-sizing: border-box; }
-      body { margin: 0; background: var(--bg); color: var(--fg); font: 18px/1.6 var(--font); }
-      a { color: var(--link); text-underline-offset: 3px; }
-      .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
-      header.top { border-bottom: 1px solid var(--line); font-family: var(--ui); font-size: 15px; }
-      header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 18px; flex-wrap: wrap; }
-      header.top .name { font-weight: 600; color: var(--fg); text-decoration: none; }
-      header.top nav { display: flex; gap: 20px; }
-      header.top nav a { color: var(--muted); text-decoration: none; }
-      header.top nav a[aria-current="page"] { color: var(--fg); }
-      main { padding-block: 40px 64px; }
-      h1, h2, h3 { line-height: 1.25; }
-      h2 { font-family: var(--ui); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 48px 0 12px; }
-      .meta { font-family: var(--ui); font-size: 14px; color: var(--muted); }
-      footer { border-top: 1px solid var(--line); font-family: var(--ui); font-size: 14px; color: var(--muted); }
-      footer .wrap { padding-block: 24px; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+      a:hover { color: var(--accent); }
+      .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+      @media (max-width: 520px) { .wrap { padding: 0 16px; } }
+      header.bar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 26px 14px; font-size: 14px; }
+      header.bar .line { flex: 1; border-bottom: 1px solid var(--ink); }
+      header.bar .wrap:last-child { padding-block: 0; }
+      header.bar .name { text-decoration: none; font-weight: 500; }
+      header.bar nav { display: flex; gap: 22px; }
+      header.bar nav a { text-decoration: none; }
+      header.bar nav a[aria-current="page"] { text-decoration: underline; }
+      main { padding-block: 0 96px; }
+      h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; }
+      h1 { font-size: clamp(52px, 8vw, 88px); line-height: 0.95; margin: 56px 0 24px; }
+      h2 { font-size: 40px; line-height: 1; margin: 64px 0 0; padding-bottom: 12px; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+      h2 small { font: 14px var(--sans); color: var(--muted); letter-spacing: 0; }
+      .lede { font: italic 400 clamp(22px, 3vw, 28px)/1.25 var(--serif); margin: 0 0 16px; }
+      .muted { color: var(--muted); }
+      footer .wrap { border-top: 1px solid var(--ink); padding-block: 22px 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
     </style>
   </head>
   <body>
-    <header class="top">
+    <header class="bar">
       <div class="wrap">
         <a class="name" href="/">Sam Barlien</a>
         <nav>
@@ -57,8 +100,17 @@ const here = Astro.url.pathname;
           ))}
         </nav>
       </div>
+      <div class="wrap"><div class="line"></div></div>
     </header>
     <main class="wrap"><slot /></main>
-    <footer><div class="wrap">Sam Barlien</div></footer>
+    <footer>
+      <div class="wrap">
+        <span>Sam Barlien</span>
+        <span>
+          <a href="https://platformengineering.org/authors/sam-barlien">Author page</a> ·
+          <a href="https://github.com/SamBarlien/sambarlien.com">Source on GitHub</a>
+        </span>
+      </div>
+    </footer>
   </body>
 </html>

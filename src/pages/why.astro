@@ -1,7 +1,21 @@
 ---
 import Base from "../layouts/Base.astro";
 ---
-<Base title="Why · Sam Barlien" description="">
-  <h1>Why this site exists</h1>
-  <p class="meta">[To write together]</p>
+<Base title="Why I made this website · Sam Barlien" description="Why Sam Barlien built sambarlien.com: a library of everything he's written and presented, and a fix for an AI that couldn't find his face.">
+  <article>
+    <h1>Why did I make this website?</h1>
+    <p>First, because there is simply no better way to satisfy one's ego than to look at a website with one's own name on it. And it's remarkable how cheap registering a domain is these days.</p>
+    <p>Secondly, because as I was building a library of the research I've written, talks I've given, events I've hosted and so on, I realised I could quickly spin this up for myself, and it might help solve one other funny problem.</p>
+    <figure>
+      <img src="/why/ai-generated-face-not-sam.webp" width="2000" height="220" alt="An AI answer describing Sam Barlien, next to an AI-generated face that is not Sam." loading="lazy" />
+      <figcaption>Figure 1. An AI tool describing me quite kindly, next to a face it made up because it couldn't find mine.</figcaption>
+    </figure>
+  </article>
 </Base>
+<style>
+  article { max-width: 680px; }
+  article p { font-size: 19px; }
+  figure { margin: 32px 0 0; }
+  img { width: 100%; height: auto; border: 1px solid var(--rule); display: block; }
+  figcaption { font: italic 18px/1.4 var(--serif); color: var(--muted); margin-top: 10px; }
+</style>

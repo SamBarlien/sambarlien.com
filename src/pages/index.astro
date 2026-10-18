@@ -1,32 +1,49 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
-import Item from "../components/Item.astro";
+import Report from "../components/Report.astro";
+import Row from "../components/Row.astro";
 import { newestFirst, kindLabel, roleLabel } from "../lib";
 
-const research = (await getCollection("research")).filter((r) => r.data.highlight).sort(newestFirst);
-const appearances = [
-  ...(await getCollection("stage")),
-  ...(await getCollection("conversations")),
-].filter((a) => a.data.highlight).sort(newestFirst);
+const allResearch = await getCollection("research");
+const allAppearances = [...(await getCollection("stage")), ...(await getCollection("conversations"))];
+const research = allResearch.filter((r) => r.data.highlight).sort(newestFirst);
+const appearances = allAppearances.filter((a) => a.data.highlight).sort(newestFirst);
 ---
-<Base title="Sam Barlien" description="Sam Barlien researches and writes about platform engineering.">
-  <p class="placeholder">[Intro paragraph: to write together]</p>
+<Base title="Sam Barlien · Platform engineering and agentic engineering platforms" description="Sam Barlien helps teams with platform engineering and agentic engineering platforms. Head of Ecosystem at Platform Engineering, the world's largest platform engineering community.">
+  <section class="hero">
+    <div>
+      <h1>Sam Barlien</h1>
+      <p class="lede">I help teams with platform engineering and agentic engineering platforms.</p>
+      <p>I'm Head of Ecosystem at <a href="https://platformengineering.org">the world's largest platform engineering community</a>, where I write research on best practices, drawing on data and conversations with hundreds of platform engineering teams and leaders a year. I also help run Platform Weekly, co-host PlatformCon, and lead the community Ambassador programme.</p>
+      <p>I'm also an <a href="https://www.imdb.com/name/nm9463674/">actor</a> and filmmaker in my spare time. Highlights include appearing in Kingdom Come: Deliverance and Chevalier, and my own self-funded horror film, <a href="https://www.instagram.com/embugfilm/">Embug</a>, which is currently in post-production.</p>
+    </div>
+    <img src="/sam-barlien.jpg" width="1200" height="1600" alt="Sam Barlien" fetchpriority="high" />
+  </section>
 
   <h2>Research</h2>
-  <ul class="list">
-    {research.map((r) => <Item title={r.data.title} url={r.data.url} take={r.data.take} />)}
-  </ul>
+  {research.map((r, i) => <Report n={i + 1} title={r.data.title} url={r.data.url} take={r.data.take} />)}
+  <p class="see-all"><a href="/library/#research">See all {allResearch.length} reports →</a></p>
 
   <h2>On stage and on air</h2>
-  <p class="placeholder">[Photos: with Gene Kim, with Aaron Erickson]</p>
-  <ul class="list">
-    {appearances.map((a) => <Item title={a.data.title} url={a.data.url} details={[kindLabel(a.data.kind), roleLabel(a.data.role), a.data.where]} />)}
-  </ul>
+  {appearances.map((a) => <Row label={kindLabel(a.data.kind)} title={a.data.title} url={a.data.url} detail={`${roleLabel(a.data.role)}, ${a.data.where}`} />)}
+  <p class="see-all"><a href="/library/#stage">See all {allAppearances.length} talks, panels, podcasts and webinars →</a></p>
 
-  <p><a href="/library/">Everything else is in the library →</a></p>
+  <p class="more"><a href="/library/">Everything else, in the library →</a></p>
 </Base>
 <style>
-  .list { list-style: none; margin: 0; padding: 0; }
-  .placeholder { font-family: var(--ui); font-size: 15px; color: var(--muted); border: 1px dashed var(--line); padding: 16px; border-radius: 6px; }
+  .hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: end; padding-bottom: 48px; border-bottom: 1px solid var(--ink); }
+  .hero h1 { margin-top: 56px; }
+  .hero p { margin: 0; max-width: 46ch; }
+  .hero .lede { margin-bottom: 18px; }
+  .hero .lede ~ p + p { margin-top: 14px; }
+  .hero img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; display: block; margin-top: 40px; }
+  .more { margin-top: 40px; }
+  .see-all { margin: 16px 0 0; font-size: 15px; }
+  .see-all a { color: var(--accent); }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; gap: 0; }
+    .hero img { max-width: 320px; order: -1; margin-top: 32px; }
+    .hero h1 { margin-top: 24px; }
+  }
 </style>

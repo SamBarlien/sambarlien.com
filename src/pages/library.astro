@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
-import Item from "../components/Item.astro";
-import { newestFirst, kindLabel, roleLabel, withLabel } from "../lib";
+import Report from "../components/Report.astro";
+import Row from "../components/Row.astro";
+import { newestFirst, kindLabel, roleLabel } from "../lib";
 
 const research = (await getCollection("research")).sort(newestFirst);
 const writing = (await getCollection("writing")).sort(newestFirst);
@@ -12,33 +13,26 @@ const press = (await getCollection("press")).filter((p) => p.data.show).sort(new
 ---
 <Base title="Library · Sam Barlien" description="Everything Sam Barlien has published or presented on platform engineering: research reports, articles, talks, panels, podcasts and webinars, with links to each.">
   <h1>Library</h1>
-  <p>Everything I've written or presented on platform engineering, with a link to each one.</p>
+  <p class="lede">Everything I've written or presented on platform engineering, with a link to each.</p>
+  <nav class="jump">
+    <a href="#research">Research</a><a href="#stage">On stage</a><a href="#conversations">In conversation</a><a href="#writing">Writing</a><a href="#press">In the press</a>
+  </nav>
 
-  <h2 id="research">Research · {research.length}</h2>
-  <ul class="list">
-    {research.map((r) => <Item title={r.data.title} url={r.data.url} take={r.data.take} details={["Report", withLabel(r.data.with)]} />)}
-  </ul>
+  <h2 id="research">Research <small>{research.length}</small></h2>
+  {research.map((r, i) => <Report n={i + 1} title={r.data.title} url={r.data.url} take={r.data.take} with={r.data.with} />)}
 
-  <h2 id="stage">On stage · {stage.length}</h2>
-  <ul class="list">
-    {stage.map((s) => <Item title={s.data.title} url={s.data.url} details={[kindLabel(s.data.kind), roleLabel(s.data.role), s.data.where]} />)}
-  </ul>
+  <h2 id="stage">On stage <small>{stage.length}</small></h2>
+  {stage.map((s) => <Row label={kindLabel(s.data.kind)} title={s.data.title} url={s.data.url} detail={`${roleLabel(s.data.role)}, ${s.data.where}`} />)}
 
-  <h2 id="conversations">In conversation · {conversations.length}</h2>
-  <ul class="list">
-    {conversations.map((c) => <Item title={c.data.title} url={c.data.url} details={[kindLabel(c.data.kind), roleLabel(c.data.role), c.data.where]} />)}
-  </ul>
+  <h2 id="conversations">In conversation <small>{conversations.length}</small></h2>
+  {conversations.map((c) => <Row label={kindLabel(c.data.kind)} title={c.data.title} url={c.data.url} detail={`${roleLabel(c.data.role)}, ${c.data.where}`} />)}
 
-  <h2 id="writing">Writing · {writing.length}</h2>
-  <ul class="list">
-    {writing.map((w) => <Item title={w.data.title} url={w.data.url} details={["Article", "platformengineering.org", withLabel(w.data.with)]} />)}
-  </ul>
+  <h2 id="writing">Writing <small>{writing.length}</small></h2>
+  {writing.map((w) => <Row label="Article" title={w.data.title} url={w.data.url} detail="platformengineering.org" />)}
 
-  <h2 id="press">In the press · {press.length}</h2>
-  <ul class="list">
-    {press.map((p) => <Item title={p.data.title} url={p.data.url} details={[p.data.publisher, p.data.author]} />)}
-  </ul>
+  <h2 id="press">In the press <small>{press.length}</small></h2>
+  {press.map((p) => <Row label="Press" title={p.data.title} url={p.data.url} detail={[p.data.publisher, p.data.author].filter(Boolean).join(", ")} />)}
 </Base>
 <style>
-  .list { list-style: none; margin: 0; padding: 0; }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; padding-bottom: 8px; }
 </style>

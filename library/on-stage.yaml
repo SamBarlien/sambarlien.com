@@ -21,16 +21,6 @@
   external: false
   highlight: false
 
-- title: "PlatformCon 2026 - Kickoff"
-  kind: "panel"
-  role: "panelist"
-  where: "PlatformCon 2026"
-  with: ["Luca Galante (host)", "Kaspar von Grünberg", "Ajay Chankramath", "Mariya"]
-  url: "https://www.youtube.com/watch?v=AhOThZvc9oU"
-  date: "2026-06-22"
-  external: false
-  highlight: false
-
 - title: "Why AI Fails Without a Platform"
   kind: "panel"
   role: "moderator"
