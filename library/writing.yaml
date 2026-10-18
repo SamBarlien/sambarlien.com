@@ -1,0 +1,128 @@
+# Writing
+# One entry per item, newest first. Edit freely: the site rebuilds from this file.
+# highlight: true puts the item on the homepage. date is for ordering only, never shown.
+
+- title: "10 platform engineering books worth your time in 2026"
+  url: "https://platformengineering.org/blog/10-platform-engineering-books-worth-your-time-in-2026"
+  date: "2026-10-14"
+
+- title: "Infrastructure identity for platform engineers"
+  url: "https://platformengineering.org/blog/infrastructure-identity-for-platform-engineers"
+  date: "2026-09-04"
+
+- title: "PlatformCon 2026 wrap-up: No AI at scale without platform engineering"
+  with: ["Florian Lipp"]
+  url: "https://platformengineering.org/blog/platformcon-2026-wrap-up-no-ai-at-scale-without-platform-engineering"
+  date: "2026-07-10"
+
+- title: "The future of AI-native Is open source"
+  url: "https://platformengineering.org/blog/the-future-of-ai-native-is-open-source"
+  date: "2026-06-19"
+
+- title: "Introducing Platform Engineering 2.0: An evolution for the AI era"
+  url: "https://platformengineering.org/blog/introducing-platform-engineering-2-0-an-evolution-for-the-ai-era"
+  date: "2026-06-16"
+
+- title: "Vulnerability management core capabilities every platform should have"
+  url: "https://platformengineering.org/blog/vulnerability-management-core-capabilities-every-platform-should-have"
+  date: "2026-02-27"
+
+- title: "Why the CVE doom cycle cannot be solved by working harder"
+  url: "https://platformengineering.org/blog/why-the-cve-doom-cycle-can-not-be-solved-by-working-harder"
+  date: "2026-02-19"
+
+- title: "Five key recommendations for platform teams in 2026"
+  url: "https://platformengineering.org/blog/five-key-recommendations-for-platform-teams-in-2026"
+  date: "2026-02-10"
+
+- title: "Announcing new course: GitOps for Platform Engineering"
+  url: "https://platformengineering.org/blog/announcing-new-course-gitops-for-platform-engineering"
+  date: "2026-02-06"
+
+- title: "10 observability tools platform engineers should evaluate in 2026"
+  url: "https://platformengineering.org/blog/10-observability-tools-platform-engineers-should-evaluate-in-2026"
+  date: "2026-01-20"
+
+- title: "The biggest challenges platform engineering teams are facing in 2026"
+  url: "https://platformengineering.org/blog/the-biggest-challenges-platform-engineering-teams-are-facing-in-2026"
+  date: "2026-01-07"
+
+- title: "Announcing the State of Platform Engineering Report Vol 4"
+  url: "https://platformengineering.org/blog/announcing-the-state-of-platform-engineering-vol-4"
+  date: "2025-12-16"
+
+- title: "What enterprises actually want from platform engineering service providers: Beyond tools to transformation"
+  url: "https://platformengineering.org/blog/what-enterprises-actually-want-from-platform-engineering-service-providers-beyond-tools-to-transformation"
+  date: "2025-12-10"
+
+- title: "OpenTelemetry: The platform engineer's path to standardized observability"
+  url: "https://platformengineering.org/blog/opentelemetry-the-platform-engineers-path-to-standardized-observability"
+  date: "2025-12-01"
+
+- title: "One year of platform engineering certifications: What 2,000 students taught us"
+  url: "https://platformengineering.org/blog/one-year-of-platform-engineering-certifications-2000-students"
+  date: "2025-11-27"
+
+- title: "Kubernetes cluster lifecycle management: From manual operations to automated excellence"
+  url: "https://platformengineering.org/blog/kubernetes-cluster-lifecycle-management-from-manual-operations-to-automated-excellence"
+  date: "2025-11-21"
+
+- title: "Why platform engineers observe infra and help devs monitor apps"
+  url: "https://platformengineering.org/blog/why-platform-engineers-observe-infra-and-help-devs-monitor-apps"
+  date: "2025-11-18"
+
+- title: "AI-powered platforms vs platforms for AI: A platform engineer’s guide"
+  url: "https://platformengineering.org/blog/ai-powered-platforms-vs-platforms-for-ai-a-platform-engineers-guide"
+  date: "2025-11-17"
+
+- title: "Why enterprises fail at platform engineering: Project vs Product mindset"
+  url: "https://platformengineering.org/blog/why-enterprises-fail-at-platform-engineering-project-vs-product-mindset"
+  date: "2025-11-14"
+
+- title: "How to measure developer productivity and platform ROI: A complete framework for platform engineers"
+  url: "https://platformengineering.org/blog/how-to-measure-developer-productivity-and-platform-roi-a-complete-framework-for-platform-engineers"
+  date: "2025-11-13"
+
+- title: "What is an Internal Developer Portal?"
+  url: "https://platformengineering.org/blog/what-is-an-internal-developer-portal"
+  date: "2025-11-06"
+
+- title: "Why enterprises fail at platform engineering: Shared language"
+  url: "https://platformengineering.org/blog/why-enterprises-fail-at-platform-engineering-shared-language"
+  date: "2025-10-14"
+
+- title: "AI needs platform engineering: Just ask Thoughtworks and Google"
+  url: "https://platformengineering.org/blog/ai-needs-platform-engineering-just-ask-thoughtworks-and-google"
+  date: "2025-10-08"
+
+- title: "Why enterprises fail at platform engineering: Executive buy-in"
+  url: "https://platformengineering.org/blog/why-enterprises-fail-at-platform-engineering-executive-buy-in"
+  date: "2025-10-02"
+
+- title: "Why enterprises fail at platform engineering: Adoption"
+  url: "https://platformengineering.org/blog/why-enterprises-fail-at-platform-engineering-adoption"
+  date: "2025-09-30"
+
+- title: "How to become a platform engineer"
+  url: "https://platformengineering.org/blog/how-to-become-a-platform-engineer"
+  date: "2025-04-15"
+
+- title: "Top 10 platform engineering tools to use in 2025"
+  url: "https://platformengineering.org/blog/top-10-platform-engineering-tools-to-use-in-2025"
+  date: "2024-12-13"
+
+- title: "Top 5 takeaways from the State of Platform Engineering Report 2024"
+  url: "https://platformengineering.org/blog/takeaways-from-state-of-platform-engineering-2024"
+  date: "2024-11-22"
+
+- title: "Why infrastructure teams need platform engineering"
+  url: "https://platformengineering.org/blog/why-infrastructure-teams-need-platform-engineering"
+  date: "2024-10-25"
+
+- title: "Top 5 security benefits of Platform Engineering"
+  url: "https://platformengineering.org/blog/top-5-security-benefits-of-platform-engineering"
+  date: "2024-09-06"
+
+- title: "7 take-aways from PlatformCon 2024"
+  url: "https://platformengineering.org/blog/7-take-aways-from-platformcon-2024"
+  date: "2024-06-28"

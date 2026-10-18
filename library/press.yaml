@@ -1,0 +1,45 @@
+# In the press
+# One entry per item, newest first. Edit freely: the site rebuilds from this file.
+# highlight: true puts the item on the homepage. date is for ordering only, never shown.
+
+- title: "What Is the Platform for Platform Engineering 2.0?"
+  publisher: "PlatformEngineering.com (Techstrong Group)"
+  author: "Alan Shimel"
+  url: "https://platformengineering.com/features/what-is-the-platform-for-platform-engineering-2-0/"
+  date: "2026-07-14"
+  show: true
+
+- title: "Decoding Platform Engineering's Rise: 2025 Industry Report and Key Insights"
+  publisher: "Cloud Virtues (personal blog on Cloud and Virtualization)"
+  author: "Shen (shendrekbharath)"
+  url: "https://cloudvirtues.wordpress.com/2026/02/19/decoding-platform-engineerings-rise-2025/"
+  date: "2026-02-19"
+  show: false
+
+- title: "#247 - Why Your Platform Engineering Is Failing (And How to Fix It) - Sam Barlien"
+  publisher: "Tech Lead Journal"
+  author: "Henry Suryawirawan"
+  url: "https://techleadjournal.dev/episodes/247/"
+  date: "2026-02-16"
+  show: false
+
+- title: "CI/CD Reimagined: End Staging Chaos with Ephemeral Infrastructure"
+  publisher: "DEV Community (Signadot vendor post)"
+  author: "Signadot"
+  url: "https://dev.to/signadot/cicd-reimagined-end-staging-chaos-with-ephemeral-infrastructure-4hak"
+  date: "2025-09-16"
+  show: false
+
+- title: "42 Experts, One Mission: Advancing Platform Engineering"
+  publisher: "The New Stack"
+  author: "Todd R. Weiss"
+  url: "https://thenewstack.io/42-experts-one-mission-advancing-platform-engineering/"
+  date: "2025-02-28"
+  show: true
+
+- title: "The 2024 State of Platform Engineering? Fledgling at Best"
+  publisher: "The New Stack"
+  author: "Jennifer Riggins"
+  url: "https://thenewstack.io/the-2024-state-of-platform-engineering-fledgling-at-best/"
+  date: "2024-11-19"
+  show: true

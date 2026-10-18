@@ -1,0 +1,250 @@
+# In conversation
+# One entry per item, newest first. Edit freely: the site rebuilds from this file.
+# highlight: true puts the item on the homepage. date is for ordering only, never shown.
+
+- title: "Unpacking the data behind a high-performance platform"
+  kind: "interview"
+  role: "host"
+  where: "Platform Engineering YouTube"
+  with: ["Charlotte Fleming (Octopus Deploy)"]
+  url: "https://www.youtube.com/watch?v=YQxzdgYzbRs"
+  date: "2026-09-24"
+  external: false
+  highlight: false
+
+- title: "The Evolution to Platform Engineering 2.0"
+  kind: "webinar"
+  role: "speaker"
+  where: "VMUG"
+  with: ["Pankaj Gupta (Broadcom)"]
+  url: "https://www.youtube.com/watch?v=JIRot55eceY"
+  date: "2026-08-04"
+  external: true
+  highlight: false
+
+- title: "The Evolution to Platform Engineering 2.0"
+  kind: "webinar"
+  role: "speaker"
+  where: "VMware Cloud Foundation (Broadcom) webinar"
+  with: ["Pankaj Gupta (Broadcom)"]
+  url: "https://www.youtube.com/watch?v=xNIDp-MKX9M"
+  date: "2026-07-28"
+  external: true
+  highlight: false
+
+- title: "Platform engineering 2.0: 5 pillars your platform needs in 2026 and beyond"
+  kind: "webinar"
+  role: "speaker"
+  where: "Platform Engineering YouTube"
+  with: ["Pankaj Gupta (VMware by Broadcom)"]
+  url: "https://www.youtube.com/watch?v=CNC3CurMt9E"
+  date: "2026-07-23"
+  external: false
+  highlight: false
+
+- title: "Platform Engineering 2.0 for the AI era"
+  kind: "webinar"
+  role: "speaker"
+  where: "VMUG"
+  with: ["Pankaj Gupta (Broadcom)"]
+  url: "https://www.youtube.com/watch?v=P7ckHar0ouQ"
+  date: "2026-06-28"
+  external: true
+  highlight: false
+
+- title: "Platform Engineering in the AI-Native Era: How to Scale AI Adoption Without Chaos. With SPS Commerce"
+  kind: "webinar"
+  role: "panelist"
+  where: "Jellyfish webinar"
+  with: ["Ryan Erickson (SPS Commerce)", "Liz Coolman (Jellyfish)", "Alexa Lytle (Jellyfish)"]
+  url: "https://www.youtube.com/watch?v=u1lL4KtH0Yg"
+  date: "2026-06-25"
+  external: true
+  highlight: false
+
+- title: "Why platform engineering is India's next big engineering career shift"
+  kind: "webinar"
+  role: "speaker"
+  where: "Platform Engineering YouTube"
+  with: ["Omshree Butani"]
+  url: "https://www.youtube.com/watch?v=Px7gfVbUi5A"
+  date: "2026-03-19"
+  external: false
+  highlight: false
+
+- title: "OpenClaw in God Mode: The Agent Risk Platform Teams Face"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Artem Lajko"]
+  url: "https://www.youtube.com/watch?v=h2yWcEWgePY"
+  date: "2026-02-25"
+  external: false
+  highlight: false
+
+- title: "Feb Event: The Platform Engineering Revolution: Industry Data and What It Means for Your Team"
+  kind: "webinar"
+  role: "speaker"
+  where: "VMUG"
+  url: "https://www.youtube.com/watch?v=zpWMJj8z3iU"
+  date: "2026-02-24"
+  external: true
+  highlight: false
+
+- title: "Decoding Platform Engineering's Rise: 2025 Industry Report and Key Insights"
+  kind: "webinar"
+  role: "speaker"
+  where: "VMware Cloud Foundation (Broadcom) webinar"
+  with: ["Pankaj Gupta (VMware by Broadcom)"]
+  url: "https://www.youtube.com/watch?v=IdsA7Fy4-uo"
+  date: "2026-02-18"
+  external: true
+  highlight: false
+
+- title: "Why Your Platform Engineering Is Failing (And How to Fix It) - Tech Lead Journal #247"
+  kind: "podcast"
+  role: "guest"
+  where: "Tech Lead Journal"
+  with: ["Henry Suryawirawan (host)"]
+  url: "https://techleadjournal.dev/episodes/247/"
+  date: "2026-02-16"
+  external: true
+  highlight: true
+
+- title: "How We Cut Pipeline Lead Time From 20 to 8 Minutes"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Michael Wolbert"]
+  url: "https://www.youtube.com/watch?v=E4lZZVLbKjk"
+  date: "2026-02-11"
+  external: false
+  highlight: false
+
+- title: "The Platform Roadmap Trick: Budget 30% for Urgent Care"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Julie Rupert (JPMorganChase)"]
+  url: "https://www.youtube.com/watch?v=gL4grLLXEfk"
+  date: "2026-02-05"
+  external: false
+  highlight: false
+
+- title: "How Kubernetes Is Adapting to AI Workloads"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Abdel Sghiouar"]
+  url: "https://www.youtube.com/watch?v=ypCfKF2byMw"
+  date: "2026-01-28"
+  external: false
+  highlight: false
+
+- title: "Platform Engineering Is the Foundation of Modern IT"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Bruno Almeida"]
+  url: "https://www.youtube.com/watch?v=McdW5Xj2bpE"
+  date: "2026-01-21"
+  external: false
+  highlight: false
+
+- title: "State of Platform Engineering in 2026: Salary, maturity, and shifting down"
+  kind: "webinar"
+  role: "speaker"
+  where: "Platform Engineering YouTube"
+  with: ["Pankaj Gupta (Broadcom)"]
+  url: "https://www.youtube.com/watch?v=jFf-ER0ZcXU"
+  date: "2026-01-20"
+  external: false
+  highlight: false
+
+- title: "What it takes to lead 100+ platform engineers: Hiring, playbook & more"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Jordan Chernev"]
+  url: "https://www.youtube.com/watch?v=uSmgqZxugiU"
+  date: "2026-01-14"
+  external: false
+  highlight: false
+
+- title: "What Platform Product Management Really Is"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Lambros Charissis (CoreWeave)"]
+  url: "https://www.youtube.com/watch?v=fQJdsDAn4XA"
+  date: "2026-01-07"
+  external: false
+  highlight: false
+
+- title: "Why Security Teams Are Turning to Platform Engineering"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Giovanna Faso (Dashlane)"]
+  url: "https://www.youtube.com/watch?v=aXPUY16ivyA"
+  date: "2025-12-17"
+  external: false
+  highlight: false
+
+- title: "Platform engineering in 2025: What changed, AI, and the future of platforms"
+  kind: "webinar"
+  role: "speaker"
+  where: "Platform Engineering YouTube"
+  with: ["Rickey Zachary (Thoughtworks)"]
+  url: "https://www.youtube.com/watch?v=S-CpnqUAmy4"
+  date: "2025-12-09"
+  external: false
+  highlight: false
+
+- title: "eAfterWork EP 8: How Platform Engineering Is Key to Successful AI With"
+  kind: "podcast"
+  role: "guest"
+  where: "eAfterWork (Aziz IM YouTube)"
+  with: ["Aziz IM (host)"]
+  url: "https://www.youtube.com/watch?v=j7k54P2zWRM"
+  date: "2025-11-27"
+  external: true
+  highlight: false
+
+- title: "Does Your Platform Need a Risk Owner?"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["Faisal Afzal (AHEAD)"]
+  url: "https://www.youtube.com/watch?v=_oGKUNQps8E"
+  date: "2025-11-26"
+  external: false
+  highlight: false
+
+- title: "From 10 Days to 3 Minutes: Fixing Developer Friction"
+  kind: "interview"
+  role: "host"
+  where: "Weave Intelligence Interviews (Platform Engineering YouTube)"
+  with: ["James R. Marcus"]
+  url: "https://www.youtube.com/watch?v=UVC25KMRyDw"
+  date: "2025-11-14"
+  external: false
+  highlight: false
+
+- title: "State of AI in Platform Engineering 2025"
+  kind: "webinar"
+  role: "speaker"
+  where: "Platform Engineering YouTube"
+  url: "https://www.youtube.com/watch?v=ROtUhWyfoIY"
+  date: "2025-09-23"
+  external: false
+  highlight: false
+
+- title: "5 takeaways from PlatformCon 2025: From “great” platforms, to doing AI right"
+  kind: "webinar"
+  role: "speaker"
+  where: "Platform Engineering YouTube"
+  url: "https://www.youtube.com/watch?v=mlj4kyERkCg"
+  date: "2025-08-26"
+  external: false
+  highlight: false

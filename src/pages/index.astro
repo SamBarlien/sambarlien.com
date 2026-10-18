@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import Item from "../components/Item.astro";
+import { newestFirst, kindLabel, roleLabel } from "../lib";
+
+const research = (await getCollection("research")).filter((r) => r.data.highlight).sort(newestFirst);
+const appearances = [
+  ...(await getCollection("stage")),
+  ...(await getCollection("conversations")),
+].filter((a) => a.data.highlight).sort(newestFirst);
+---
+<Base title="Sam Barlien" description="Sam Barlien researches and writes about platform engineering.">
+  <p class="placeholder">[Intro paragraph: to write together]</p>
+
+  <h2>Research</h2>
+  <ul class="list">
+    {research.map((r) => <Item title={r.data.title} url={r.data.url} take={r.data.take} />)}
+  </ul>
+
+  <h2>On stage and on air</h2>
+  <p class="placeholder">[Photos: with Gene Kim, with Aaron Erickson]</p>
+  <ul class="list">
+    {appearances.map((a) => <Item title={a.data.title} url={a.data.url} details={[kindLabel(a.data.kind), roleLabel(a.data.role), a.data.where]} />)}
+  </ul>
+
+  <p><a href="/library/">Everything else is in the library →</a></p>
+</Base>
+<style>
+  .list { list-style: none; margin: 0; padding: 0; }
+  .placeholder { font-family: var(--ui); font-size: 15px; color: var(--muted); border: 1px dashed var(--line); padding: 16px; border-radius: 6px; }
+</style>

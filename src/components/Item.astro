@@ -1,0 +1,21 @@
+---
+// One line in a list: linked title, then small grey details underneath.
+interface Props {
+  title: string;
+  url: string;
+  details?: (string | undefined | false)[];
+  take?: string;
+}
+const { title, url, details = [], take } = Astro.props;
+const meta = details.filter(Boolean).join(" · ");
+---
+<li class="item">
+  <a href={url} rel="noopener">{title}</a>
+  {take && <p class="take">{take}</p>}
+  {meta && <div class="meta">{meta}</div>}
+</li>
+<style>
+  .item { padding: 12px 0; border-top: 1px solid var(--line); }
+  .item:first-child { border-top: 0; }
+  .take { margin: 4px 0 2px; }
+</style>

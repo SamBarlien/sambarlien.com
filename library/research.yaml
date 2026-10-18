@@ -1,0 +1,80 @@
+# Research
+# One entry per item, newest first. Edit freely: the site rebuilds from this file.
+# highlight: true puts the item on the homepage. date is for ordering only, never shown.
+
+- title: "The future of AI-native is open source"
+  take: "NVIDIA and AMD opening up their AI software layers gives platform teams capability, not lock-in. I compare a production stack built on each and set out five tests for judging an opinionated AI stack."
+  url: "https://weaveintelligence.io/research/the-future-of-ai-native-is-open-source"
+  date: "2026-09-28"
+  highlight: false
+
+- title: "State of AI in Platform Engineering 2026"
+  take: "38% of organisations now ship twice as much since AI, but only 8% see a real return. Our data says the bottleneck is the platform, not the model."
+  with: ["Luca Galante", "Florian Lipp"]
+  url: "https://weaveintelligence.io/research/state-of-ai-in-platform-engineering-2026"
+  date: "2026-09-17"
+  highlight: true
+
+- title: "Platform engineering 2.0: An evolution for the AI era"
+  take: "Platform engineering for AI is an evolution, not a revolution. The Internal Developer Platform becomes an Agentic Development Platform on the same operating model, and I set out the five pillars to get there."
+  with: ["Pankaj Gupta"]
+  url: "https://platformengineering.org/reports/platform-engineering-2-0-an-evolution-for-the-ai-era"
+  date: "2026-06-16"
+  highlight: true
+
+- title: "Operationalizing AI coding agents in regulated industries"
+  take: "Autonomous coding agents break the governance banks and governments rely on, and IDE-level controls won't fix it. I argue the workspace is the right control surface: policy as code, audit trails and clear limits on what each agent can do."
+  url: "https://weaveintelligence.io/research/operationalizing-ai-coding-agents-in-regulated-industries"
+  date: "2026-03-26"
+  highlight: false
+
+- title: "The great unlock: How platform engineering creates AI-native enterprises"
+  take: "Most enterprises are stuck between AI pilots and production. I explain the difference between AI-enabled and AI-native, and why platform engineering is the operating model that gets you from one to the other."
+  url: "https://weaveintelligence.io/research/the-great-unlock-how-platform-engineering-creates-ai-native-enterprises"
+  date: "2026-03-16"
+  highlight: false
+
+- title: "Vulnerability management for platform engineers"
+  take: "\"Shift left\" turned fixing CVEs into a tax on every developer. Security should shift down into the platform, and I lay out the four capabilities that make that work."
+  url: "https://weaveintelligence.io/research/vulnerability-management-for-platform-engineers"
+  date: "2026-02-02"
+  highlight: false
+
+- title: "State of Platform Engineering Report: Volume 4"
+  take: "We surveyed 500+ platform engineers and leaders. Platform engineering has become the operating model for AI-native companies, and is spreading into security, observability and FinOps."
+  with: ["Luca Galante"]
+  url: "https://weaveintelligence.io/research/state-of-platform-engineering-report-volume-4"
+  date: "2025-12-16"
+  highlight: true
+
+- title: "Observability for platform engineers"
+  take: "Observability should be a core platform capability, not a pile of tools each team buys for itself. I cover OpenTelemetry, automation at scale, and running observability as a product."
+  url: "https://weaveintelligence.io/research/observability-for-platform-engineers"
+  date: "2025-11-26"
+  highlight: false
+
+- title: "Kubernetes cluster lifecycle management for platform engineers"
+  take: "How platform teams move from looking after clusters by hand to automated, standardised blueprints, including running many clusters and staying compliant."
+  url: "https://weaveintelligence.io/research/kubernetes-cluster-lifecycle-management-for-platform-engineers"
+  date: "2025-11-05"
+  highlight: false
+
+- title: "Cloud Development Environments (CDEs) for Platform Engineers"
+  take: "Why cloud development environments belong in a platform strategy: standard setups, self-service, and a faster inner loop for developers."
+  url: "https://weaveintelligence.io/research/cloud-development-environments-for-platform-engineers"
+  date: "2025-09-29"
+  highlight: false
+
+- title: "State of AI in Platform Engineering 2025"
+  take: "88% of engineers use AI regularly, but individual gains weren't turning into results for the organisation. We called it the implementation plateau, and argued platform engineers are the ones who can get past it."
+  with: ["Luca Galante"]
+  url: "https://weaveintelligence.io/research/state-of-ai-in-platform-engineering-2025"
+  date: "2025-09"
+  highlight: false
+
+- title: "State of Platform Engineering Report Volume 3"
+  take: "300+ platform teams, a maturity model for the industry, and a finding that surprised people: more than half of platform teams were under two years old."
+  with: ["Luca Galante"]
+  url: "https://weaveintelligence.io/research/state-of-platform-engineering-vol-3"
+  date: "2024-11"
+  highlight: false

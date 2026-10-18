@@ -1,0 +1,62 @@
+# On stage
+# One entry per item, newest first. Edit freely: the site rebuilds from this file.
+# highlight: true puts the item on the homepage. date is for ordering only, never shown.
+
+- title: "AI Didn't Remove the Bottleneck. It Moved It"
+  kind: "panel"
+  role: "speaker"
+  where: "Coder panel recorded at Levi's Stadium, Santa Clara (published on Platform Engineering YouTube)"
+  with: ["Rob Whiteley (Coder, host)", "Gene Kim", "Jackson Aimiuwu (AWS)", "Nicky Pike (Coder)"]
+  url: "https://www.youtube.com/watch?v=ek8uHQOGodg"
+  date: "2026-10-07"
+  external: true
+  highlight: true
+
+- title: "How HBO's The Pitt is a master class in platform engineering"
+  kind: "talk"
+  role: "speaker"
+  where: "PlatformCon 2026"
+  url: "https://www.youtube.com/watch?v=IxrR5yV-pa8"
+  date: "2026-06-23"
+  external: false
+  highlight: false
+
+- title: "PlatformCon 2026 - Kickoff"
+  kind: "panel"
+  role: "panelist"
+  where: "PlatformCon 2026"
+  with: ["Luca Galante (host)", "Kaspar von Grünberg", "Ajay Chankramath", "Mariya"]
+  url: "https://www.youtube.com/watch?v=AhOThZvc9oU"
+  date: "2026-06-22"
+  external: false
+  highlight: false
+
+- title: "Why AI Fails Without a Platform"
+  kind: "panel"
+  role: "moderator"
+  where: "Platform Engineering Meetup, San Francisco (with CircleCI)"
+  with: ["Aaron Erickson (NVIDIA)", "Faisal Afzal (AHEAD)"]
+  url: "https://www.youtube.com/watch?v=Vilrre0P6Zw"
+  date: "2025-11-17"
+  external: false
+  highlight: true
+
+- title: "How platforms are foundational to AI: Platform engineering exec roundtable"
+  kind: "panel"
+  role: "panelist"
+  where: "Platform Engineering YouTube"
+  with: ["Rickey Zachary (Thoughtworks)", "Eric Maxwell (Google)"]
+  url: "https://www.youtube.com/watch?v=xQV9AqQX7VA"
+  date: "2025-10-28"
+  external: false
+  highlight: false
+
+- title: "Platform Engineering 2025: What “great” looks like now"
+  kind: "panel"
+  role: "moderator"
+  where: "PlatformCon 2025 Live Day London"
+  with: ["Nicki Watt (Trifork UK)", "Cornelia Davis (Temporal)", "Rickey Zachary (Thoughtworks)"]
+  url: "https://www.youtube.com/watch?v=vMx3puQMROs"
+  date: "2025-06-25"
+  external: false
+  highlight: false
